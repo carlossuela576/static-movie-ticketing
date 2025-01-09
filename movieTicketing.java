@@ -26,6 +26,18 @@ public class movieTicketing{
         switch (movieChoice){
             case 1:
                 System.out.println("You have selected The Lion King");
+                System.out.print("Please select seat row: ");
+                int row1 = sc.nextInt();
+                System.out.print("Please select seat column: ");
+                int col1 = sc.nextInt();
+                //using arrays to create seat data
+                int [][] seatDat1 = {
+                    {0, 1, 0, 0, 1},
+                    {1, 0, 0, 1, 1},
+                    {0, 1, 1, 0, 0},
+                    {1, 1, 1, 0, 1},
+                    {1, 0, 1, 1, 0}
+                };
                 
         }
     }
