@@ -1,10 +1,8 @@
 import java.util.Scanner;
 
 public class movieTicketing{
-    public static void main(String [] args){
-        Scanner sc = new Scanner(System.in);
 
-        //movie list
+    static void movieprompts(){
         System.out.println("Welcome to the Movie Ticketing System");
         System.out.println("Please select a movie to watch:");
         System.out.println("1. The Lion King");
@@ -12,11 +10,29 @@ public class movieTicketing{
         System.out.println("3. The Incredibles");
         System.out.println("4. The Little Mermaid");
         System.out.println("5. Jungle Book");
-        
+    } 
 
+    static boolean choiceverif(int n){
+        if (n >= 1 && n <= 5){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+
+    public static void main(String [] args){
+        Scanner sc = new Scanner(System.in);
+
+        //movie list
+        movieprompts();
+        
         //user input, movie selection
-        System.out.print("Enter the number of the movie you want to watch: ");
-        int movieChoice = sc.nextInt();
+        int movieChoice;
+        do { 
+            System.out.print("Enter the number of the movie you want to watch: ");
+            movieChoice = sc.nextInt();
+        } while (choiceverif(movieChoice));
 
         //switch case for movie selection, and seat selection
         switch (movieChoice){
